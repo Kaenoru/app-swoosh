@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="TkF-SE-VnJ">
-                                <rect key="frame" x="67.5" y="48" width="240" height="16"/>
+                                <rect key="frame" x="67.5" y="48" width="240" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="0Tk-ch-vkE"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HI-2i-pf3">
-                                <rect key="frame" x="69.5" y="211" width="236" height="30"/>
+                                <rect key="frame" x="69.5" y="215" width="236" height="30"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -47,14 +47,14 @@
                                     <segue destination="bZR-Zh-Gmb" kind="show" id="taG-5x-mKf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHZ-uX-Ns5">
-                                <rect key="frame" x="69.5" y="156" width="236" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHZ-uX-Ns5">
+                                <rect key="frame" x="69.5" y="160" width="236" height="55"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city. Dominate the league." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-7y-Hel">
-                                <rect key="frame" x="69.5" y="257" width="236" height="37"/>
+                                <rect key="frame" x="69.5" y="261" width="236" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="bsc-Yx-BZk"/>
                                 </constraints>
@@ -85,10 +85,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="HW2-g5-x3Q" id="IgH-f4-v61"/>
-                        <outlet property="swoosh" destination="TkF-SE-VnJ" id="kaN-ga-W8n"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,6 +114,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="bZR-Zh-Gmb" eventType="touchUpInside" id="Ngz-Am-Gn3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="383-SX-oQu" customClass="BorderedButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="311" height="48"/>
@@ -129,6 +128,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="bZR-Zh-Gmb" eventType="touchUpInside" id="Nh8-0w-gx5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-OM-j6y" customClass="BorderedButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="311" height="48"/>
@@ -140,6 +142,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="bZR-Zh-Gmb" eventType="touchUpInside" id="3Ny-PS-I67"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -157,7 +162,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-pj-cD6" customClass="BorderedButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxy-pj-cD6" customClass="BorderedButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="32" y="587" width="311" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.47683005140000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -167,12 +172,19 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="bZR-Zh-Gmb" eventType="touchUpInside" id="asV-WT-pVC"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc7-6m-Nzm">
-                                <rect key="frame" x="32" y="52" width="23" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc7-6m-Nzm">
+                                <rect key="frame" x="32" y="52" width="24" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5YT-6j-j57"/>
+                                    <constraint firstAttribute="width" constant="24" id="XgY-V1-sDf"/>
+                                </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="pYD-WB-RUC" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="qgd-eS-8O9"/>
+                                    <segue destination="pYD-WB-RUC" kind="unwind" unwindAction="unwindFromLeagueVCWithUnwindSegue:" id="b1G-9e-13C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,6 +208,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FZ5-js-NGf"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="rxy-pj-cD6" id="TyV-6W-jrr"/>
+                        <segue destination="kvf-10-cnY" kind="show" identifier="SkillVCSegue" id="fQ4-yf-rr2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZ6-GH-nXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pYD-WB-RUC" userLabel="Exit" sceneMemberID="exit"/>
@@ -265,6 +281,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-xP-g4V">
+                                <rect key="frame" x="32" y="52" width="24" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Eou-qQ-Xvx"/>
+                                    <constraint firstAttribute="width" constant="24" id="WR6-dy-0wd"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="Cc5-cp-NzE" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="4Nc-yL-DI9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -272,6 +299,7 @@
                             <constraint firstItem="utn-7m-PCR" firstAttribute="trailing" secondItem="aA3-i9-4If" secondAttribute="trailing" constant="32" id="6l0-uD-ln4"/>
                             <constraint firstItem="vZg-dQ-wGx" firstAttribute="leading" secondItem="utn-7m-PCR" secondAttribute="leading" id="DtT-3W-x4t"/>
                             <constraint firstItem="vZg-dQ-wGx" firstAttribute="top" secondItem="aGq-BE-xkr" secondAttribute="top" id="FjZ-IJ-mSV"/>
+                            <constraint firstItem="bqt-xP-g4V" firstAttribute="top" secondItem="utn-7m-PCR" secondAttribute="top" constant="32" id="Hlw-hv-74m"/>
                             <constraint firstItem="vZg-dQ-wGx" firstAttribute="trailing" secondItem="utn-7m-PCR" secondAttribute="trailing" id="KSa-C2-gc5"/>
                             <constraint firstAttribute="bottom" secondItem="vZg-dQ-wGx" secondAttribute="bottom" id="Ltf-TJ-NfP"/>
                             <constraint firstItem="utn-7m-PCR" firstAttribute="bottom" secondItem="aA3-i9-4If" secondAttribute="bottom" constant="32" id="OSd-wH-Zrl"/>
@@ -280,12 +308,14 @@
                             <constraint firstItem="SsY-8T-RxI" firstAttribute="leading" secondItem="utn-7m-PCR" secondAttribute="leading" constant="32" id="Ztb-4S-Wwv"/>
                             <constraint firstItem="utn-7m-PCR" firstAttribute="trailing" secondItem="Tq1-Yg-85X" secondAttribute="trailing" constant="32" id="ndF-OV-xH3"/>
                             <constraint firstItem="Tq1-Yg-85X" firstAttribute="leading" secondItem="utn-7m-PCR" secondAttribute="leading" constant="32" id="p9u-7k-BkC"/>
+                            <constraint firstItem="bqt-xP-g4V" firstAttribute="leading" secondItem="utn-7m-PCR" secondAttribute="leading" constant="32" id="xTF-AO-04x"/>
                             <constraint firstItem="aA3-i9-4If" firstAttribute="leading" secondItem="utn-7m-PCR" secondAttribute="leading" constant="32" id="zXp-tN-mC7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="utn-7m-PCR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24z-Es-pmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Cc5-cp-NzE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1493" y="30"/>
         </scene>
